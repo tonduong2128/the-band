@@ -1,0 +1,494 @@
+/* Reset CSS*/
+/*https://www.w3schools.com/w3css/tryw3css_templates_band.htm*/
+*{
+    padding: 0px;
+    margin:  0px;
+    box-sizing: border-box; /*khỏi tính toán đã dạy*/
+}
+html{
+    scroll-behavior:smooth; /* scroll cuộn, hehavior: hành vi */
+    font-family:Arial, Helvetica, sans-serif ; /* Dùng để sửa phông chữ có tính kế thừa*/
+}
+/*
+    1. Làm từ ngoài vào trong 
+    2. Từ trên xuống dưới
+    3. Từ tổng quan đến chi tiết
+*/
+/*
+1. Vị trí 
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (tròn vuông)
+*/
+/* Common */
+.clear{
+    clear: both;
+}
+.row{
+    margin-left:-8px ;
+    margin-right:-8px ;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third{
+    width: 33.33%;
+}
+.col-haft{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.tex-center{
+    text-align:center !important;  
+}
+.btn{
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: black;
+    color:white;
+    font-weight: 500;
+    padding:8px 16px ;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+ }
+.btn:hover,
+.content-section .SEND-btn:hover{
+    cursor: pointer;
+    background-color: rgb(153, 149, 149);
+    color: black;
+}
+
+/* main */
+#main{
+   
+}
+
+#header{
+    height: 46px;
+    background-color: black;  
+    position: fixed; /* cho header dinh ở trên khi cuôn*/
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1; /* cứ tăng giần giá trị từ 1 đến khi nào phần heder nổi lên*/
+  
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav>li {
+    display: inline-block; /*Các thẻ li tren 1 hàng*/
+    position: relative;
+}
+#nav>li>a{
+    color:white;  
+    text-transform:uppercase;/*Chinh thanh chu hoa*/
+}
+#nav >li,
+#nav .subnav>li{
+
+    list-style: none; /*bỏ chấm đầu dòng của thẻ ul li*/
+}
+#nav li a{
+    
+    text-decoration: none; /*Bỏ gạch chân*/
+    line-height:46px; ;/* Chiều cao của chữ*/
+    padding: 0px 24px;
+    display:inline-block; /* mặt định của thẻ a là inline không có kích thước vì vậy cần thêm ... để
+                            thẻ a đạt được kích thước ngang dọc và nó ăn theo line-height*/
+}   
+#nav .subnav li:hover, /* nếu code giống nhau*/
+#nav li:hover>a{  /*: sau li vì để khi di chuột vào menu của li , li vẫn còn màu )*/
+    color: black;
+    background-color:#ccc;
+}
+#nav .subnav{
+    position: absolute;
+    top:100%;
+    background-color: #fff; 
+    box-shadow:0 0 10px rgba(0, 0,0, 0.3); /* bóng đổ x y  lan ra bao nhiêu màu*/
+    display: none;
+    }
+#nav .nav-arrow-down{
+    font-size:14px ;
+}
+#nav li:hover .subnav{
+    display: block;
+    }
+#nav .subnav li >a{
+    color: black;
+    padding-left:15px ;
+    line-height:38px ;
+}
+.mobile-menu-btn,
+.search-btn{
+    float: right; /* sang ben phai the chứa nó làm thẻ mất tính chất khối hay block*/
+}
+.mobile-menu-btn,
+.search-btn .search-icon{
+    color: white;
+    font-size:20px ;
+    line-height: 46px;
+    display: inline-block;
+    padding: 0px 21px;
+    cursor: pointer;/* di chuột vào phần click được con trỏ chuột đổi thành hình bàn tay không cần hover*/
+}
+.mobile-menu-btn:hover{
+    background-color:#ccc;
+    color: black;
+}
+.mobile-menu-btn{
+    display: none;
+}
+.search-btn .search-icon:hover{
+    background-color: red;
+}
+#slider{
+  margin-top: 28px;
+  background-color: salmon;
+  padding-top: 50%; /*50% chìu ngang của chính nó, tỉ lệ ảnh*/
+  background: url('../css/img/sider/slider1.jpg') center top /cover no-repeat  ;   
+  position: relative;
+}
+#slider .text-content{
+    color:white;
+    position: absolute;
+    bottom: 10px;
+    margin: 32px;
+    left:50% ;                 /*tip căn giữa coi trong khóa tip*/
+    transform:translateX(-50%);
+    /* hoặc bỏ 2 dòng trên width: 100%;
+    hoặc right:0px; left:0px;*/
+    text-align: center; /* chỉnh chữ vào giữa tương tự word*/
+    text-shadow: 0 0 1px black;
+}
+#slider .text-content .text-heading{
+    font-size: 24px;
+    font-weight:100;/* độ dày chữ 100->700 */
+}
+#slider .text-content .text-description{
+    font-size: 15px;
+    margin-top:25px;
+}
+#content{
+}
+#content .content-section{
+    width: 800px;
+    max-width: 100%; /*Nếu kích thước không đủ 800px thì 100% the char chứ no
+                    overflow:hiding; cái nào lòi ra khỏi thẻ cha ẩn đi */
+    margin:0px auto;
+    padding: 64px 16px 112px 16px;
+}
+#content .section-heading{
+    margin: 10px;
+    font-size:30px;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 4px;/* làm cho từ chữ cách xa nhau ra*/
+}
+#content .section-sub-heading
+{
+    margin: 20px 0px;
+    font-size:15px;
+    text-align: center;
+    color: rgb(77, 74, 74); /* hay sử sụng opacity: 0.6; làm mờ đi */
+    font-style:italic;
+}
+#content .about-text{
+    text-align:justify;/* can cho thành đoạn hình vuông như word*/
+    font-size:15px ;
+    line-height: 1.4; /* khoảng cách giữa hai dòng chữ*/
+}
+#content .members-list{
+    margin-top:48px ;
+}
+#content .member-item{
+    float: left; /* hay display: inline-block; */
+    width:calc(97%/3);
+    text-align: center;
+}
+#content .member-name{
+    font-size: 15px; 
+}
+#content .member-img{
+    width: 153px;
+    margin-top:15px ;
+    border-radius: 4px;/* tạo góc bo cho bức ảnh */
+}
+#content .tour-section{
+    background-color: black;
+    color:white;
+}
+.tour-section .section-sub-heading{
+    font-weight:500;
+}
+.tour-section .tickets-list
+{
+    font-size: 15px;
+    background-color: white ;
+    color: rgb(92, 88, 88);
+    text-decoration: none;
+    margin-top: 40px;
+}
+.tickets-list li{
+    
+    padding:12px ;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none; /* bỏ chấm đầu dòng của thẻ  ul li*/
+}
+.tickets-list .sold-out{
+    background-color: red;
+    color: white;
+    padding: 3px 4px;
+    margin-left: 16px ;
+}
+.tickets-list .quantity{
+   float: right;/* dính sang bênh phải. thẻ có tính chất block, mới có width height*/
+   font-size: 15px;
+   width: 24px;
+   background-color: black;
+   color: white;
+   border-radius: 50%;  /* bo tròn elment */
+   text-align: center;  /*hai hàng bên căn giữa*/ 
+   line-height:24px;  
+   margin-top:-3px;
+}
+.tour-section .place-item{
+
+}
+.places-list{
+    margin-top: 32px;    /* Kỷ thuật căn giữa*/
+    margin-left:-21px ;
+    
+    display: inline-block;
+}
+.place-item{
+    float: left;
+    width: 33.3333%;
+    padding-left:20px ;
+  
+}
+
+.place-img{
+    height:184px;
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    background-color: white;
+    color: rgb(100, 98, 98);
+    font-size: 15px;
+    padding: 16px;
+}
+.place-heading{
+    margin: 15px 0px;
+    color: black;
+    font-weight: 550;
+}
+.place-time{
+    margin: 15px 0px;
+}
+.place-desc{
+    margin: 15px 0px;
+}
+
+/*contact-form */
+.contact-content{
+    margin-top: 48px;
+    padding:32px 0px;
+}
+.contact-info{
+    font-size: 18px;
+}
+.contact-info a{
+    opacity: 0.8;
+}
+.contact-info a:hover{
+    opacity: 1;
+}
+.contact-info i[class*="ti-"]{
+    margin:5px;
+    display:inline-block;
+}
+.form-control{
+    border:1px solid #ccc ;
+    padding:10px;
+    width: 100%;
+    
+}
+.form-control, .SEND-btn{
+    margin-top:8px;
+    padding: 16px;
+    -webkit-appearance: none;/* dành cho iphone bỏ áp dụng mặc định của trình duyệt đang chạy*/
+}
+.content-section .SEND-btn{
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    margin-top:20px ;
+    float: right;
+   
+}
+#content .my-address{
+    height:auto;
+    width: 100%;
+    opacity: 0.8;
+}
+#content .map{
+}
+.footer-content{
+   
+    opacity: 0.6;
+    
+}
+.content-icons{
+    text-align: center;
+}
+.icon{
+    color: black;
+    font-size: 24px;
+    text-decoration: none; /*bo gạch chân*/
+}
+.icon:hover{
+    opacity: 0.5;
+}
+.content-sce{
+    text-align: center;
+    font-size:15px ;
+    margin:25px 0px ;
+}
+.sce{
+    display: inline-block;
+}
+.my-wed{
+    display: inline-block;
+    color:black;
+}
+#footer{  
+    padding: 64px 16px;  
+}
+/* modal*/
+.modal__buy-tikets{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0,0, 0.3);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.buy-tikets__content-block{
+    padding:0px 16px 16px 16px ;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.buy-tikets__content{
+    background-color: #fff;
+    width: 900px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+}
+.buy-tikets__header{
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009688;
+    font-size: 30px;
+    font-weight: 450;
+    color: #fff;
+    position: relative;
+}
+.buy-tikets__header-content{
+    display: flex;
+}
+.modal-close{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 12px;
+    padding: 16px 16px;
+    display: block;
+}
+.modal-close:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    color: #fff;
+}
+.buy-tikets__header-text{
+    padding-left:16px ;
+}
+.buy-tikets__contain-input{
+    display: flex;
+    flex-direction:column ;
+}
+.buy-tikets__contain-input-description{
+    padding: 15px 0px ;
+    font-size: 15px;
+    color:#000 ;
+}
+.buy-tikets__contain-input-content{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border:1px solid #cccccc;
+}
+.buy-tikets__contain-buy{
+    background-color: #009688;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    margin: 16px 0px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+.buy-tikets__contain-buy i{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+}
+.buy-tikets__footer{
+    display:flex;
+    justify-content: space-between;
+    flex: 1;    
+    align-items: center;
+}
+.buy-tikets__footer-close{
+    background-color: #f44336;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 450;
+    padding: 10px 16px ;
+    margin-top: 20px;
+}
+.buy-tikets__footer-close i{
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+}
+.buy-tikets__footer-help{
+    text-transform:capitalize;
+}
+.buy-tikets__footer-help a{
+    color: #009688;
+    font-size: 12px;
+    text-transform:lowercase;
+
+}

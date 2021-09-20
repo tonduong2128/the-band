@@ -1,0 +1,156 @@
+ /* pc */
+ @media ( min-width:64em )
+ {
+  
+ }
+ /* tablet && mobile*/
+ @media(max-width:63.9375em){
+     .font-size-40{
+         font-size: 40px;
+     }
+     .btn{
+        padding: 16px;
+    }
+    .footer-content .content-icons a{
+        font-size: 28px;
+        margin: 0px 8px;
+    }
+    .content-sce{
+        font-size: 28px;
+    }
+    .contact-content{
+        line-height: 2;
+    }
+    .SEND-btn{
+        font-size: 24px ;
+    }
+    
+   
+ }
+ /* tablet */
+ @media(min-width:46.25em) and ( max-width:63.9375em) /* Phai đẻ nhỏ trước lớn sau*/ 
+ {
+    #nav li a {
+        line-height: 64px;
+    }
+    #header {
+        height: 64px;
+    }
+    .buy-tikets__content{
+        width: 600px;
+    } 
+   
+ }
+ /* mobile */
+ @media( max-width:46.1875em )
+ {
+    .buy-tikets__content{
+        margin: 0 8px;
+    } 
+    .s-full-width{
+        width: 100%;
+    }
+    .text-center{
+        text-align: center;
+    }
+    #nav{
+        display: block;
+    }
+    #header{
+        overflow:hidden;
+    }
+    #nav>li {
+        display: block;
+    }
+    #nav>li a{
+        display: block;
+    }
+    .search-btn .search-icon{
+        display: none;
+    }
+    #slider{
+        margin-top:24px;
+    }
+    .mobile-menu-btn{
+        display: block;
+        position:absolute;
+        top: 0px;
+        right: 0px;
+    }
+    #nav li:first-child{
+        display: inline-block;
+    }
+    #slider .text-content{
+        display: none;
+    }
+    #content .member-item{
+        width: auto;
+        float: none;
+    }
+    #content .member-img{
+        width: 60%;
+        margin: 20px 0px;
+    }
+    .places-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .place-item{
+        float: none;
+        width: 100%;
+        margin: 16px 5px ;
+        text-align: center;
+        padding-left: 10px;
+    }
+    .contact-info,
+    .contact-form{
+        float: none;
+    }
+    .contact-content{
+        width: 100%;
+        
+    }
+    .contact-info p{
+        float:none;
+        display: block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: rgb(102, 97, 97);
+    }
+    #nav .subnav li >a{
+        padding:5px ;
+        margin-left:41px ;
+        display: inline-block;
+    }
+    #input-text{
+        width: 100%;
+        float: none;
+    }
+    #input-form{
+        width: 100%;
+        float: none;
+    }
+    .contact-form,
+    .contact-info{
+        width: 100%;
+    }
+    .contact-info{
+        margin-bottom: 32px;
+    }
+    #content .my-address{
+        height: auto;
+    }
+    .intput-contact{
+        width: 100%;
+    }
+    .row{
+        margin-left:0px ;
+        margin-right:0px ;
+    }
+    .col{
+        float: left;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+ }
