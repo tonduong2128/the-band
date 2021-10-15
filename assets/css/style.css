@@ -266,14 +266,12 @@ html{
 .places-list{
     margin-top: 32px;    /* Kỷ thuật căn giữa*/
     margin-left:-21px ;
-    
-    display: inline-block;
+    display: flex;
 }
 .place-item{
-    float: left;
     width: 33.3333%;
-    padding-left:20px ;
-  
+    margin-left:20px ;
+    background-color: white;
 }
 
 .place-img{
@@ -285,7 +283,6 @@ html{
     opacity: 0.6;
 }
 .place-body{
-    background-color: white;
     color: rgb(100, 98, 98);
     font-size: 15px;
     padding: 16px;
@@ -300,6 +297,11 @@ html{
 }
 .place-desc{
     margin: 15px 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    min-height: 52px;
 }
 
 /*contact-form */
